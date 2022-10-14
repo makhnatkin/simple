@@ -1,0 +1,8 @@
+._ {
+    list-style: none;
+}
+
+.item {
+    background: gray;
+    color: white;
+}

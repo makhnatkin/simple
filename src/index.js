@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import { MainPageContainer } from './pages/MainPage/MainPage';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <MainPageContainer list = {[{
+          href: '/company',
+          title: 'О компании'
+      }, {
+          href: '/catalog',
+          title: 'Каталог'
+      }, {
+          href: '/catalogue',
+          title: 'Каталог другой'
+      }, {
+          href: '/about',
+          title: 'О нас'
+      }]}/>
   </React.StrictMode>
 );
 
