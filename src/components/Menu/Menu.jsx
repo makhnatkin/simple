@@ -1,4 +1,4 @@
-import styles from './Menu.module.css';
+import './Menu.css';
 
 const initialList = [{
     href: '/company',
@@ -13,8 +13,8 @@ const initialList = [{
 
 export const Menu = ({
     list = initialList
-}) => <ul className={styles.menu}>
-    {list.map(({ href, title }) => <li key={title} className={styles.item}>
+}) => <ul className="menu">
+    {list.map(({ href, title }) => <li key={title} className="menu__item">
             <a href={href}>
                 {title}
             </a>
