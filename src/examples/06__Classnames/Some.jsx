@@ -6,7 +6,7 @@ import styles from 'Some.module.css';
 
 const Some = ({ title }) => {
     // classnames helps to concat strings
-    const blockClass = classnames(styles.some, styles.danger);
+    const blockClass = classnames(styles._, styles.danger);
 
     return <div className={blockClass}>
         <div className={styles.title}>{title}</div>
