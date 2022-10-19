@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import styles from 'Some.module.css';
 
 const Some = ({ title, isDanger }) => {
-    const blockClass = classnames(styles.some, {
+    const blockClass = classnames(styles._, {
         // modifer depends on the props
         [styles.danger]: isDanger
     });
