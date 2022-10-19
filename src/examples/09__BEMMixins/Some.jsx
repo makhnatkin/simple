@@ -8,9 +8,11 @@ const Some = ({
     isDanger,
     className // for BEM mixin
 }) => {
-    const blockClass = classnames(styles.some, {
-        [styles.danger]: isDanger,
-
+    const blockClass = classnames(
+        styles.some,
+        {
+            [styles.danger]: isDanger
+        },
         // block, but in same time === element for parent block
         className
     });
