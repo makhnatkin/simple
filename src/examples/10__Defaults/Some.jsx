@@ -13,7 +13,7 @@ const Some = ({
     type = 'checkbox',
     value = ''
 }) => {
-    const blockClass = classnames(styles.some, {
+    const blockClass = classnames(styles._, {
         [styles.disabled]: isDisabled,
         [styles.selected]: isSelected,
     });

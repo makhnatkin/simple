@@ -20,7 +20,7 @@ const Some = ({
         onChange(value); // callback
     }
     
-    return <div className={styles.some}>
+    return <div className={styles._}>
         <div className={styles.title}>{title}</div>
         <input
             onChange={handleChange}

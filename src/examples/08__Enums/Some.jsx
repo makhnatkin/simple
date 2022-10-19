@@ -14,7 +14,7 @@ export const Some = ({
     alertType = someTypes.info, // default type
     isDisabled = false,
 }) => {
-    const blockClass = classnames(styles.some, {
+    const blockClass = classnames(styles._, {
         [styles.disabled]: isDisabled,
 
         // enums
