@@ -7,7 +7,7 @@ const Some = ({
     ...props
 }) => {
 
-    return <div className={styles.some} {...props}>
+    return <div className={styles._} {...props}>
         <div className={styles.title}>{title}</div>
     </div>;
 }

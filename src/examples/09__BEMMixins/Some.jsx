@@ -9,7 +9,7 @@ const Some = ({
     className // for BEM mixin
 }) => {
     const blockClass = classnames(
-        styles.some,
+        styles._,
         {
             [styles.danger]: isDanger
         },
