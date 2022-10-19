@@ -14,5 +14,5 @@ const Some = ({ title }) => <div className="some some_danger">
 // ----------------------------------------
 // usage
 const App = () => {
-    return <Some title="Привет, ученики!">;
+    return <Some title="Привет, ученики!" />;
 };

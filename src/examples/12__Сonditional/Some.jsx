@@ -31,5 +31,5 @@ const App = () => {
             title="Привет, ученики!"
             isWide={false}
         />;
-    <div/>
+    </div>
 };

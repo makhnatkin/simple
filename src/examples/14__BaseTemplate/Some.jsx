@@ -10,9 +10,7 @@ const Some = ({
     className,
     ...props
 }) => {
-    const blockClass = classnames(styles.some, {
-        [className]: !!className;
-    });
+    const blockClass = classnames(styles.some, className);
 
     return <div className={blockClass} {...props}>
         <div className={styles.title}>{title}</div>

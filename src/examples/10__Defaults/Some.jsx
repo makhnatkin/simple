@@ -10,7 +10,7 @@ const Some = ({
     isDisabled = false,
     isSelected = false,
     onChange = noop, // empty function
-    type = 'checkbox'
+    type = 'checkbox',
     value = ''
 }) => {
     const blockClass = classnames(styles.some, {
@@ -49,5 +49,5 @@ const App = () => {
             isSelected={true}
             title="Привет, ученики!"
         />;
-    <div/>
+    </div>
 };

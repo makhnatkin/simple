@@ -12,7 +12,7 @@ const Some = ({
         [styles.danger]: isDanger,
 
         // block, but in same time === element for parent block
-        [className]: !!className
+        className
     });
 
     return <div className={blockClass}>

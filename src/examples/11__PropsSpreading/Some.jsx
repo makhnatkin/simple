@@ -21,5 +21,5 @@ const App = () => {
         {/* ...props */}
         {/* https://reactjs.org/docs/dom-elements.html */}
         <Some title="Привет, ученики!" tabIndex="-1" />;
-    <div/>
+    </div>
 };
