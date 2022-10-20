@@ -20,10 +20,6 @@ export const Some = ({
     size = someSizeTypes.normal,
     isDisabled = false,
 }) => {
-
-    const res = classnames({
-        [styles.danger]: true
-    }); // ''
     const blockClass = classnames(styles._, {
         [styles.disabled]: isDisabled,
 
