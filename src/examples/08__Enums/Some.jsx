@@ -4,23 +4,40 @@ import classnames from 'classnames';
 import styles from 'Some.module.css';
 
 // enums
-export const someTypes = {
+export const SomeAlertTypes = {
     danger: 'danger',
     info: 'info',
     warning: 'warning',
 };
 
+export const SomeSizeTypes = {
+    small: 'small',
+    normal: 'normal',
+    big: 'big',
+};
+
+
 export const Some = ({
-    alertType = someTypes.info, // default type
+    alertType = SomeAlertTypes.info, // default type
+    size = SomeSizeTypes.normal,
     isDisabled = false,
 }) => {
+
+    const res = classnames({
+        [styles.danger]: true
+    }); // ''
     const blockClass = classnames(styles._, {
         [styles.disabled]: isDisabled,
 
-        // enums
-        [styles.danger]: alertType === someTypes.danger,
-        [styles.warning]: alertType === someTypes.warning,
-        [styles.info]: alertType === someTypes.info,
+        // alertType modifer
+        [styles.danger]: alertType === SomeAlertTypes.danger,
+        [styles.warning]: alertType === SomeAlertTypes.warning,
+        [styles.info]: alertType === SomeAlertTypes.info,
+
+        // size modifer
+        [styles.big]: size === SomeSizeTypes.big,
+        [styles.normal]: size === SomeAlertTypes.normal,
+        [styles.small]: size === SomeAlertTypes.small,
     });
 
     return <div className={blockClass}>
@@ -37,13 +54,13 @@ const App = () => {
 
         {/* alertType === someTypes.danger */}
         <Some
-            alertType={someTypes.danger}
+            alertType={SomeAlertTypes.danger}
             title="Привет, ученики!"
         />
 
         {/* combain with other props */}
         <Some
-            alertType={someTypes.danger}
+            alertType={SomeAlertTypes.danger}
             isDisabled={true}
             title="Привет, ученики!"
         />
