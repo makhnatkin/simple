@@ -6,6 +6,7 @@ import styles from 'Some.module.css';
 const noop = () => {};
 
 const Some = ({
+    title = '',
     onChange = noop,
     value: initialValue = '',
 }) => {
