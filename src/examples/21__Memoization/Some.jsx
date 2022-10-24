@@ -1,30 +1,27 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
+import useSearch from './fetch-items';
 
-const noop = () => {};
+function MyBigList({ term, onItemClick }) {
+    const items = useSearch(term); // get list data
 
-// smart component (container)
-const SomeContainer = ({ surname }) => {
-    // state
-    const [name, setName] = useState('');
-
-    // memoization
-    // https://reactjs.org/docs/hooks-reference.html#usememo
-    // https://reactjs.org/docs/hooks-reference.html#usecallback
-    // https://reactjs.org/docs/react-api.html#reactmemo
-    const handleChange = useCallback(({ target: { value } }) => {
-        setName(`${surname}: ${value}`);
-    }, [surname]);
-
-    return <input
-        value={name}
-        onChange={handleChange}
-    />;
+    return <div>{items.map(
+        item => <div onClick={onItemClick}>
+            {item}
+        </div>)}
+    </div>;
 }
 
-// ----------------------------------------
-// usage
-const App = () => {
-    return <div>
-        <SomeContainer />
-    </div>;
-};
+const List = React.memo(MyBigList);
+
+export function MyParent({ term }) {
+    const onItemClick = useCallback(event => {
+        console.log('You clicked ', event.currentTarget);
+    }, [term]);
+
+    return (
+        <List
+            term={term}
+            onItemClick={onItemClick}
+        />
+    );
+}
